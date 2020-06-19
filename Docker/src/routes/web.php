@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+/*Coctail's API ROUTE*/
+Route::post('/cocktail/index','CocktailController@index')->name('cocktail.index');
