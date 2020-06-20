@@ -54,7 +54,7 @@ class IngredientController extends Controller
 
     public function delete(Request $request)
     {
-        $ingredient = Ingredient::find([$request['id']]);
+        $ingredient = Ingredient::find($request['id']);
         $ingredient->delete();
         return $ingredient;
     }

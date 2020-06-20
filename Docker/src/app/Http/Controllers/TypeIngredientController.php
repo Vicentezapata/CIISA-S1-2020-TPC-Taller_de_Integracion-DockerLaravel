@@ -51,7 +51,7 @@ class TypeIngredientController extends Controller
 
     public function delete(Request $request)
     {
-        $typeIngredient = TypeIngredient::find([$request['id']]);
+        $typeIngredient = TypeIngredient::find($request['id']);
         $typeIngredient->delete();
         return $typeIngredient;
     }

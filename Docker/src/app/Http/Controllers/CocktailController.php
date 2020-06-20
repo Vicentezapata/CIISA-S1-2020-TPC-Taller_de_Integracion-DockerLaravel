@@ -42,18 +42,18 @@ class CocktailController extends Controller
     public function update(Request $request)
     {
         //METODO 1
-        /*$cocktail = Cocktail::where('id',$request['id'])->first();
+        $cocktail = Cocktail::where('id',$request['id'])->first();
         $cocktail->name = $request['name'];
         $cocktail->degrees = $request['degrees'];
-        $cocktail->save();*/
+        $cocktail->save();
         //METODO 2
-        $cocktail = Cocktail::where('id',$request['id'])->update(['name'=>$request['name'],'degrees'=>$request['degrees']]);
+        //$cocktail = Cocktail::where('id',$request['id'])->update(['name'=>$request['name'],'degrees'=>$request['degrees']]);
         return $cocktail;
     }
 
     public function delete(Request $request)
     {
-        $cocktail = Cocktail::find([$request['id']]);
+        $cocktail = Cocktail::find($request['id']);
         $cocktail->delete();
         return $cocktail;
     }

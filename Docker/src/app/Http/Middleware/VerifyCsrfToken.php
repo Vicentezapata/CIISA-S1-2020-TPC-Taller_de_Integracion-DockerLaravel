@@ -20,6 +20,8 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         /*Cocktail API ROUTES*/
-        '/cocktail/index' 
+        '/cocktail/index','cocktail/store','/cocktail/update','/cocktail/delete','/cocktail/getAllRecipe',
+        /*Cocktail API ROUTES*/
+        '/ingredient/index','ingredient/store','/ingredient/update','/ingredient/delete',
     ];
 }

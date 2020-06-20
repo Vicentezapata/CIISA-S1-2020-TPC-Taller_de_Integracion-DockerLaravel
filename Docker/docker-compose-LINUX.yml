@@ -30,6 +30,20 @@ services:
       - "8300:80"
     depends_on:
       - db_ciisa_tpc
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - db_ciisa_tpc:db
+    ports:
+      - "9006:80"
+    environment:
+      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_root_password
+      - MYSQL_DATABASE=ciisa_tpc_db
+      - MYSQL_USER=ciisa_tpc_db
+      - MYSQL_PASSWORD_FILE=/run/secrets/db_password
+    secrets:
+      - db_root_password
+      - db_password
 
 secrets:
   db_root_password:
