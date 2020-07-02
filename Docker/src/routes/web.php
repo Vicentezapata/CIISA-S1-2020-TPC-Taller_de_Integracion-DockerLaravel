@@ -16,6 +16,16 @@ Route::get('/', function () {
 });
 /*___________________________________
  |                                   | 
+ |       User's API ROUTE        |
+ |___________________________________|
+*/
+Route::post('/users/index','UserController@index')->name('users.index');
+Route::post('/users/store','UserController@store')->name('users.store');
+Route::post('/users/update','UserController@update')->name('users.update');
+Route::post('/users/delete','UserController@delete')->name('users.delete');
+Route::post('/users/login','UserController@login')->name('users.login');
+/*___________________________________
+ |                                   | 
  |       Cocktail's API ROUTE        |
  |___________________________________|
 */
