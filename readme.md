@@ -1,4 +1,4 @@
-# Proyecto Gestor de Documentos
+# CIISA-S1-2020-TPC-Taller_de_Integracion-DockerLaravel
 
 ### **Description**
 La carpeta Docker tiene las instrucciones necesarias para crear el contenedor 
